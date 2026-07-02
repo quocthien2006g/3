@@ -1,0 +1,168 @@
+/* ---------- Mobile First ---------- */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#dedede;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    font-size:2rem;
+}
+
+p{
+    text-align:center;
+    font-size:1.2rem;
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+}
+
+figure{
+
+    border:3px solid #444;
+
+    padding:10px;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+figcaption{
+
+    margin-top:10px;
+
+    font-weight:bold;
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media screen and (min-width:772px){
+
+.grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+figure{
+
+border-radius:50%;
+
+overflow:hidden;
+
+}
+
+figure:last-child{
+
+grid-column:1 / span 2;
+
+}
+
+img{
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+}
+
+/* ---------- Large Screen ---------- */
+
+@media screen and (min-width:992px){
+
+.grid{
+
+grid-template-columns:1fr 1fr 1fr;
+
+}
+
+figure{
+
+border-radius:0;
+
+}
+
+figure:nth-child(3n){
+
+grid-column:span 2;
+
+}
+
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce){
+
+html{
+
+scroll-behavior:auto;
+
+}
+
+*{
+
+transition:none !important;
+
+animation:none !important;
+
+}
+
+}
+
+/* ---------- Dark Mode ---------- */
+
+@media (prefers-color-scheme: dark){
+
+body{
+
+background:#222;
+
+color:white;
+
+}
+
+figure{
+
+background:#333;
+
+color:#ffff99;
+
+border:3px solid black;
+
+}
+
+a{
+
+color:#ffff99;
+
+}
+
+}
